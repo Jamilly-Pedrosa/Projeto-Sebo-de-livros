@@ -1,0 +1,25 @@
+@startuml caso_de_uso_sebo_de_livros
+left to right direction
+actor "Cliente" as Cliente
+actor "Administrador" as Admin
+
+rectangle "Sistema de Sebo de Livros" {
+    (Gerenciar Livros Cadastrar/Editar/Listar/Excluir) as GerenciarLivros
+    (Gerenciar Clientes Cadastrar/Editar/Listar/Excluir) as GerenciarClientes
+    (Gerenciar Transação Cadastrar/Listar) as GerenciarTransação
+    (Definir Preços de Compra e Venda) as DefinirPrecos
+
+    (Consultar Livros) as ConsultarLivros
+    (Comprar Livros) as Comprar
+    (Vender Livros para o Sebo) as Vender
+
+    Admin --> GerenciarLivros
+    Admin --> GerenciarClientes 
+    Admin --> GerenciarTransação
+    Admin --> DefinirPrecos
+
+    Cliente --> ConsultarLivros
+    Cliente --> Comprar
+    Cliente --> Vender
+}
+@enduml
