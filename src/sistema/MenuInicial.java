@@ -6,7 +6,7 @@ public class MenuInicial {
 	public void menuInicial(Scanner input) {
         int opcao;
         do {
-            System.out.println("\n======꒰ 🎬 SEBO DE LIVROS ꒱======");
+            System.out.println("\n======꒰ ୨🕮୧ SEBO DE LIVROS ꒱======");
             System.out.println(".✦ [1] Menu Administrador");
             System.out.println(".✦ [2] Menu Cliente");
             System.out.println(".✦ [0] Sair");

@@ -11,14 +11,6 @@ public class Transacao {
 	private Date date; 
 	private double valor; 
 	
-	/*public Transacao(String nomeCliente, String tituloLivro, Date date, double valor) { 
-		super(); 
-		this.nomeCliente = nomeCliente; 
-		this.tituloLivro = tituloLivro; 
-		this.date = date; 
-		this.valor = valor; 
-	} */
-	
 	public Transacao(String nomeCliente, Livro livro, Date date) {
 	        this.nomeCliente = nomeCliente;
 	        this.tituloLivro = livro.getTitulo();
