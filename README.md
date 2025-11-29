@@ -2,12 +2,13 @@
 
 ## Contexto
 
-O **Sistema de Sebo de Livros** é um projeto desenvolvido para a disciplina de **Projetos de Software** com o objetivo de desenvolver um sistema de computador no padrão MVC e conectado a um banco de
-dados relacional, executável pelo terminal.
+O Sistema de Sebo de Livros é um projeto desenvolvido para a disciplina de Projetos de Software, com foco em aplicar o padrão de arquitetura MVC e criar um modelo de banco de dados relacional que represente a estrutura de persistência do sistema.
+
+Atualmente, o sistema funciona via linha de comando, utilizando coleções em Java para manipular os dados. O banco de dados PostgreSQL foi desenvolvido como modelo conceitual e relacional para representar como a persistência funcionaria caso fosse integrada futuramente ao sistema.
 
 ## **🎯** Objetivo
 
-Gerenciar livros, usuários e transações de compra e venda de um sebo de livros virtual via **linha de comando**, com armazenamento persistente em banco de dados PostgreSQL.
+Gerenciar livros, usuários e transações de compra e venda de um sebo de livros virtual, permitindo operações de administração e uso de clientes através de menus interativos.
 
 ## Atores e Funcionalidades
 
@@ -69,11 +70,42 @@ A camada Controller atua como um intermediário entre a View e o Model, processa
 - GerenciamentoTransacao
 
 Essas classes são responsáveis por executar as operações de cadastrar, listar, editar e remover registros, além de manipular os dados em listas (ArrayList).
+
+
+## 🗄️ Modelo de Banco de Dados Relacional (PostgreSQL)
+
+Como parte da Entrega 03, foi criado um modelo relacional representando a persistência do sistema, possuindo três relacionamentos entre tabelas, conforme solicitado.
+
+### Objetivos do Banco de Dados
+- Representar usuários e seus papéis (ADMIN/CLIENTE)
+- Armazenar livros e seus estados de conservação
+- Registrar transações de compra e venda
+- Garantir integridade referencial entre entidades
   
+### Estrutura das Tabelas
+
+#### Tabela usuarios
+Armazena administradores e clientes, diferenciados pelo campo `papel`.
+
+#### Tabela livros
+Contém informações sobre livros disponíveis para compra e venda.
+
+#### Tabela transacoes
+Registra operações de compra/venda entre clientes e o sebo.
+
+### Relacionamentos
+
+1. `usuarios (CLIENTE)` → `transacoes`
+2. `livros` → `transacoes`
+3. Regras de papel e integridade para diferenciar administrador e cliente
+
+Esses relacionamentos garantem rastreabilidade e consistência entre as operações.
+
 ## Tecnologias Utilizadas
 
-- **Java** (Programação Orientada a Objetos)
-- **PlantUML** (diagrama de caso de uso)
-- **Markdown Preview Mermaid Support** (diagrama de classes)
-- **Git e GitHub** (versionamento e documentação)
-- **Figma** (protótipo das funcionalidades do sistema)
+- **Java (POO)** — lógica e estrutura do sistema
+- **PostgreSQL** — modelagem do banco de dados
+- **PlantUML** — diagramação de caso de uso
+- **Mermaid (Markdown)** — diagrama de classes
+- **Git e GitHub** — versionamento e documentação
+- **Figma** — protótipo das telas e fluxo visual
