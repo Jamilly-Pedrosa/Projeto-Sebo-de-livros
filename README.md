@@ -101,6 +101,25 @@ Registra operações de compra/venda entre clientes e o sebo.
 
 Esses relacionamentos garantem rastreabilidade e consistência entre as operações.
 
+## ▶️ Como Executar o Sistema
+O sistema funciona via linha de comando e foi desenvolvido em Java utilizando apenas recursos nativos da linguagem.
+A execução é simples e não requer banco de dados integrado nesta versão.
+
+1. **Clone o repositório**
+Abra o terminal e execute:
+`git clone <URL do repositório>`
+
+2. **Abra o projeto na sua IDE**
+Você pode usar Eclipse, IntelliJ ou VS Code com extensão de Java.
+
+3. **Compile o projeto**
+Certifique-se de que a pasta src/ esteja marcada como Source Folder.
+
+4. Vá até: `sistema/IniciarMenu.java` e execute o arquivo. Esse é o ponto de entrada do sistema.
+
+Pronto!
+Use os menus exibidos no terminal para navegar como administrador ou cliente.
+
 ## Tecnologias Utilizadas
 
 - **Java (POO)** — lógica e estrutura do sistema
